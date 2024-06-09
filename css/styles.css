@@ -55,7 +55,6 @@ h1 {
 
 .button-primary {
     display: inline-block;
-    width: clamp(150px, 175px, 200px);
     background-color: var(--primary);
     color: var(--text);
     padding: 20px 10px;
@@ -66,6 +65,7 @@ h1 {
     font-weight: 500;
     text-align: center;
     margin-top: 35px;
+    width: 100%;
 }
 
 .button-primary:hover {
@@ -75,7 +75,6 @@ h1 {
 
 .button-secondary {
     display: inline-block;
-    width: clamp(150px, 175px, 200px);
     background-color: var(--secondary);
     color: var(--text);
     padding: 20px 10px;
@@ -86,6 +85,7 @@ h1 {
     font-weight: 500;
     text-align: center;
     margin-top: 35px;
+    width: 100%;
 }
 
 .button-secondary:hover {
@@ -206,10 +206,6 @@ main .hero .button-container {
     flex-wrap: wrap;
 }
 
-main .hero .button-container .button-primary {
-    margin-right: clamp(10px, 10px, 20px);
-}
-
 main .hero .inner-container {
     display: flex;
 }
@@ -218,8 +214,8 @@ main .hero .inner-container:first-of-type {
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
-    margin: 20px 20px;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 main .hero .inner-container:first-of-type h2 {
@@ -488,12 +484,25 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
         font-weight: 600;
         font-size: 3rem;
     }
+    main .hero .button-container .button-secondary {
+        width: 200px;
+    }
+    main .hero .inner-container:first-of-type {
+        margin-bottom: 0px;
+    }
     .about .cardbox {
         width: calc(50% - 20px);
     }
     
     .about .hobbies-card {
         width: calc(50% - 20px);
+    }
+    main .hero .button-container {
+        flex-wrap: nowrap;
+    }
+    main .hero .button-container .button-primary {
+        margin-right: clamp(10px, 10px, 20px);
+        width: 200px;
     }
 }
 
