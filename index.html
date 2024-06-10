@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src="js/main.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
     <script src="js/particles.js" defer></script>
     <script src="js/app.js" defer></script>
 </head>
@@ -30,7 +30,7 @@
             <div class="nav">
                 <nav>
                     <ul>
-                        <li><a href="#index">Home</a></li>
+                        <li><a href="#top">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#education">Education</a></li>
@@ -54,7 +54,7 @@
         </section>
     </header>
     <main>
-        <section id="index" class="center-container hero">
+        <section class="center-container hero">
             <div class="inner-container">
                 <h2><span>Hello </span>Portfolio,</h2>
                 <h2>I'm Patrick <span>Skinner</span></h2>
@@ -99,6 +99,81 @@
                     <li>Building computers and keyboards from scratch.</li>
                     <li>Playing with, tinkering with arduios and circuits.</li>
                 </ul>
+        </section>
+        <section id="skills" class="center-container skills">
+            <h2>Skills</h2>
+            <div class="skills-slider" id="languages-slider">
+                <h3>Languages</h3>
+                <div class="skills-slide-track">
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/html5.svg" alt="HTML5"></div>
+                            <h4>HTML5</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/css.svg" alt="CSS3"></div>
+                            <h4>CSS3</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/javascript.svg" alt="JavaScript"></div>
+                            <h4>JavaScript</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/csharp.svg" alt="C#"></div>
+                            <h4>C#</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/bootstrap.svg" alt="Bootstrap"></div>
+                            <h4>Bootstrap</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/godot.svg" alt="Godot"></div>
+                            <h4>GDScript</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button id="languages-prev">&lt;</button>
+                    <button id="languages-next">&gt;</button>
+                </div>
+            </div>
+            <div class="skills-slider" id="programs-slider">
+                <h3>Programs</h3>
+                <div class="skills-slide-track">
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/visualstudio.svg" alt="Visual Studio"></div>
+                            <h4>Visual Studio</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/godot.svg" alt="Godot"></div>
+                            <h4>Godot Engine</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/vscode.svg" alt="Visual Studio Code"></div>
+                            <h4>Visual Studio Code</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button id="programs-prev">&lt;</button>
+                    <button id="programs-next">&gt;</button>
+                </div>
+            </div>
         </section>
     </main>
 </body>

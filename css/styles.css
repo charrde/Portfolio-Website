@@ -103,6 +103,7 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
+    z-index: 100;
 }
 
 header .center-container {
@@ -160,7 +161,6 @@ header .inner-container.shrink h1 {
     font-size: 1.5rem;
     border-top: 1px solid var(--quarternary);
     border-bottom: 1px solid var(--quarternary);
-    z-index: 100;
 }
 
 nav {
@@ -305,7 +305,7 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
 }
 
 .slider::before {
-	content: "☀️";
+	content: "🌙";
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -313,7 +313,7 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
 }
 
 .slider::after {
-	content: "🌙";
+	content: "☀️";
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -349,7 +349,7 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     margin-top: 125px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
 }
 
 .about > h2 {
@@ -396,7 +396,6 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     background-color: var(--primary70);
     padding: 40px 40px 40px 40px;
     border-radius: 40px;
-    margin-top: 40px;
 }
 
 .about .bio-card {
@@ -407,7 +406,6 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     background-color: var(--secondary70);
     padding: 40px 40px 40px 40px;
     border-radius: 40px;
-    margin-top: 40px;
 }
 
 .about .hobbies-card h4, .about .hobbies-card li {
@@ -453,6 +451,100 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
 .about .resume-card p {
     color: var(--text);
     font-size: 1.25rem;
+}
+
+.skills {
+    padding: 20px 20px;
+    margin-top: 125px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.skills h2 {
+    color: var(--text);
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.skills-slider {
+	overflow: hidden;
+	width: 100%;
+    background-color: var(--primary70);
+    border-radius: 40px;
+}
+
+.skills-slider:nth-of-type(2) {
+    background-color: var(--secondary70);
+}
+
+.skills-slider h3 {
+    color: var(--text);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.skills-slide-track {
+	display: flex;
+	transition: transform 0.5s ease;
+	will-change: transform;
+}
+
+.skills-slide {
+	width: 100%;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    padding: 40px 40px 40px 40px;
+}
+
+.skills-card {
+	width: 100%;
+	padding: 40px;
+	border-radius: 40px;
+	justify-content: center;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.skills-card .skills-image {
+	max-width: 256px;
+	width: 100%;
+}
+
+.skills-card h4 {
+	color: var(--text);
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-align: center;
+	width: 100%;
+}
+
+.carousel-nav {
+	display: flex;
+	justify-content: center;
+	transform: translateY(-50%);
+    gap: 20px;
+}
+
+.carousel-nav button {
+    background: none;
+	border: none;
+	color: white;
+	font-size: 2rem;
+	padding: 0.5rem;
+	cursor: pointer;
+}
+
+.carousel-nav button:hover {
+	background: var(--primary30);
 }
 
 @keyframes blink {
@@ -504,6 +596,23 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
         margin-right: clamp(10px, 10px, 20px);
         width: 200px;
     }
+    .skills-slider {
+        overflow: visible;
+    }
+    .skills-slide-track {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        transform: none;
+    }
+    .skills-slide {
+        width: calc(50% - 20px);
+        margin: 10px;
+        transition: none;
+    }
+    .carousel-nav {
+        display: none;
+    }
 }
 
 @media(min-width: 1100px) {
@@ -538,4 +647,7 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     .theme-switch-mobile {
         display: none;
     }
+	.skills-slide {
+		width: calc(33.333% - 20px);
+	}
 }
