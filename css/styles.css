@@ -93,6 +93,46 @@ h1 {
     color: var(--text);
 }
 
+.button-tetrary {
+    display: inline-block;
+    background-color: var(--tertiary);
+    color: var(--text);
+    padding: 20px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 35px;
+    width: 100%;
+}
+
+.button-tetrary:hover {
+    background-color: var(--quarternary);
+    color: var(--text);
+}
+
+.button-github {
+    display: inline-block;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 20px 10px;
+    border: 2px solid var(--text);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 35px;
+    width: 100%;;
+}
+
+.button-github:hover {
+    background-color: var(--text);
+    color: var(--background);
+}
+
 body {
     background-color: var(--background);
 }
@@ -547,6 +587,122 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
 	background: var(--primary30);
 }
 
+.education {
+    padding: 20px 20px;
+    margin-top: 125px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.education h2 {
+    color: var(--text);
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.education .education-card {
+    background-color: var(--primary70);
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.education .education-card .card-text h3 {
+    color: var(--text);
+    font-size: 2rem;
+    margin: 0;
+    display: inline-block;
+}
+
+.education .education-card .card-text p {
+    color: var(--text);
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+.education .education-card .card-text h4 {
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.education .education-card {
+    width: 100%;
+}
+
+.education .education-card .card-text {
+    width: 100%;
+    padding: 40px 40px 40px 40px;
+}
+
+.education .education-card .card-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.portfolio {
+    padding: 20px 20px;
+    margin-top: 125px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.portfolio h2 {
+    color: var(--text);
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.portfolio .portfolio-card {
+    background-color: var(--primary70);
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.portfolio .portfolio-card .card-text {
+    width: 100%;
+    padding: 40px 40px 40px 40px;
+}
+
+.portfolio .portfolio-card .card-text h3 {
+    white-space: nowrap;
+    color: var(--text);
+    font-size: 2rem;
+    margin: 0;
+    display: inline-block;
+}
+
+.portfolio .portfolio-card .card-text p {
+    color: var(--text);
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+.portfolio .portfolio-card .card-text a {
+    width: 100%;
+}
+
+.portfolio .portfolio-card .card-text .button-primary:hover {
+    background-color: var(--primary30);
+    color: var(--text);
+}
+
+.portfolio .portfolio-card img {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
 @keyframes blink {
 	from, to { opacity: 1; }
 	50% { opacity: 0; }
@@ -613,6 +769,19 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     .carousel-nav {
         display: none;
     }
+    .education .education-card .card-text {
+        width: 65%;
+    }
+    
+    .education .education-card .card-image {
+        width: 35%;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 40px;
+    }
+    .portfolio .portfolio-card {
+        width: calc(50% - 20px);
+    }
 }
 
 @media(min-width: 1100px) {
@@ -650,4 +819,7 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
 	.skills-slide {
 		width: calc(33.333% - 20px);
 	}
+    .portfolio .portfolio-card {
+        width: calc((100% - 80px) / 3);
+    }
 }
