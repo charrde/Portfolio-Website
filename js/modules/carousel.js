@@ -24,7 +24,9 @@ export function initCarousel() {
 			let autoSlideTimeout;
 			const autoSlideDelay = 2000; // 2 seconds
 			const resumeDelay = 5000; // 5 seconds
-			let isAutoSliding = window.innerWidth < 800;
+			let isAutoSliding = false;
+
+			let startX, endX;
 
 			function updateCarousel() {
 				const width = slides[0].clientWidth;
@@ -39,6 +41,7 @@ export function initCarousel() {
 					slideTrack.style.transition = 'transform 0.5s ease';
 				}, 50);
 				clearInterval(autoSlideInterval);
+				autoSlideInterval = null;
 			}
 
 			function nextSlide() {
@@ -71,11 +74,27 @@ export function initCarousel() {
 			function stopAutoSlide() {
 				isAutoSliding = false;
 				clearInterval(autoSlideInterval);
+				autoSlideInterval = null;
 			}
 
 			function resetAutoSlideTimeout() {
 				clearTimeout(autoSlideTimeout);
 				autoSlideTimeout = setTimeout(startAutoSlide, resumeDelay);
+			}
+
+			function handleSwipe() {
+				const swipeDistance = endX - startX;
+				if (Math.abs(swipeDistance) > 50) {
+					if (swipeDistance > 0) {
+						prevSlide();
+					} 
+					else {
+						nextSlide();
+					}
+					if (window.innerWidth < 800) {
+						resetAutoSlideTimeout();
+					}
+				}
 			}
 
 			prevButton.addEventListener('click', function() {
@@ -105,13 +124,26 @@ export function initCarousel() {
 					stopAutoSlide();
 					resetCarousel();
 				} 
-				else {
+				else if (!autoSlideInterval) {
 					resetCarousel();
 					startAutoSlide();
 				}
 			});
 
+			slider.addEventListener('touchstart', function(event) {
+				startX = event.touches[0].clientX;
+			});
+
+			slider.addEventListener('touchmove', function(event) {
+				endX = event.touches[0].clientX;
+			});
+
+			slider.addEventListener('touchend', function() {
+				handleSwipe();
+			});
+
 			if (window.innerWidth < 800) {
+				console.log('Starting auto slide...');
 				startAutoSlide();
 			}
 
