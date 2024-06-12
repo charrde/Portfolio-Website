@@ -92,6 +92,7 @@ export function initCarousel() {
 						nextSlide();
 					}
 					if (window.innerWidth < 800) {
+						stopAutoSlide();
 						resetAutoSlideTimeout();
 					}
 				}

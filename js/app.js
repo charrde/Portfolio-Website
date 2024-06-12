@@ -110,8 +110,3 @@ let particleConfig = {
 };
 
 particlesJS('particles-js', particleConfig);
-
-function updateParticleColor(newColor) {
-	particleConfig.particles.color.value = newColor;
-	particlesJS('particles-js', particleConfig);
-}
