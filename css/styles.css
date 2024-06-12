@@ -10,6 +10,10 @@ html {
     0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
     0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
     0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+    --transition-colors: color, background-color, border-color, color-mix, box-shadow, linear-gradient;
+    --transition-all: all;
+    --transition03: 0.3s ease;
+    --transition05: 0.5s ease;
 }
 
 :root[data-theme="light"] {
@@ -111,12 +115,13 @@ h1 {
     font-size: 2.5rem;
     font-weight: 600;
     color: var(--text);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .center-container {
     margin: 0 auto;
     max-width: 1200px;
-
 }
 
 .particles-js-canvas-el {
@@ -124,10 +129,6 @@ h1 {
     top: 0;
     z-index: -1;
     height: 100%;
-}
-
-.width-100 {
-    width: 100%;
 }
 
 .button-primary {
@@ -142,6 +143,8 @@ h1 {
     font-weight: 500;
     text-align: center;
     margin-top: 35px;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .button-primary:hover {
@@ -161,6 +164,8 @@ h1 {
     font-weight: 500;
     text-align: center;
     margin-top: 35px;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .button-secondary:hover {
@@ -181,6 +186,8 @@ h1 {
     text-align: center;
     margin-top: 35px;
     width: 100%;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .button-tetrary:hover {
@@ -200,7 +207,9 @@ h1 {
     font-weight: 500;
     text-align: center;
     margin-top: 35px;
-    width: 100%;;
+    width: 100%;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .button-github:hover {
@@ -210,6 +219,8 @@ h1 {
 
 body {
     background-color: var(--background);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 header {
@@ -219,6 +230,8 @@ header {
     top: 0;
     width: 100%;
     z-index: 100;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 header .center-container {
@@ -258,17 +271,22 @@ header .inner-container.shrink h1 {
     border: none;
     cursor: pointer;
     padding: 0;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .menu svg {
     fill: var(--text);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .nav {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     width: 100%;
+    left: -100%;
     top: 100%;
-    left: 0;
     position: absolute;
     background: var(--background);
     color: var(--text);
@@ -276,6 +294,15 @@ header .inner-container.shrink h1 {
     font-size: 1.5rem;
     border-top: 1px solid var(--quarternary);
     border-bottom: 1px solid var(--quarternary);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors), left, opacity;
+}
+
+.show-nav {
+    visibility: visible;
+    width: 100%;
+    opacity: 1;
+    left: 0;
 }
 
 nav {
@@ -299,16 +326,12 @@ nav ul li a {
     color: var(--text);
     display: block;
     padding: 10px 20px;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 nav ul li a:hover {
     background-color: var(--primary30);
-}
-
-.show-nav {
-    display: block;
-    width: 100%;
-    left: 0;
 }
 
 .theme-switch {
@@ -418,14 +441,20 @@ main .hero .inner-container:first-of-type {
 main .hero .inner-container:first-of-type h2 {
     color: var(--text);
     margin-top: 15px;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 main .hero .inner-container:first-of-type h2 span:first-of-type {
     color: var(--tertiary);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 main .hero .inner-container:first-of-type h2:last-of-type span:first-of-type {
     color: var(--primary);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 main .hero .inner-container:first-of-type h2:not(:nth-of-type(2)) {
@@ -464,6 +493,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     position: relative;
 	animation: blink 0.7s step-end infinite;
     color: var(--text);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
     z-index: -1;
 }
 
@@ -480,16 +511,22 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     width: 100%;
     font-size: 3rem;
     font-weight: 500;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .about h2 span {
     color: var(--tertiary);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .about .bio-card h4, 
 .about .bio-card h3, 
 .about .bio-card p {
     color: var(--text);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .about .bio-card h3 {
@@ -513,6 +550,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     margin: 0;
     display: inline-block;
     background: linear-gradient(180deg,transparent 50%,var(--accent) 50%);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .about .bio-card {
@@ -520,6 +559,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     padding: 40px 40px 40px 40px;
     border-radius: 40px;
     box-shadow: var(--box-shadow);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .about .bio-card {
@@ -531,10 +572,14 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     padding: 40px 40px 40px 40px;
     border-radius: 40px;
     box-shadow: var(--box-shadow);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .about .hobbies-card h4, .about .hobbies-card li {
     color: var(--text);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .about .hobbies-card h4 {
@@ -564,6 +609,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     border-radius: 40px;
     margin-top: 40px;
     box-shadow: var(--box-shadow);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .about .resume-card h4 {
@@ -572,11 +619,15 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     margin: 0;
     display: inline-block;
     background: linear-gradient(180deg,transparent 50%,var(--primary70) 50%);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .about .resume-card p {
     color: var(--text);
     font-size: 1.25rem;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .about .about-download-button {
@@ -596,6 +647,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     width: 100%;
     font-size: 3rem;
     font-weight: 500;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .skills-slider {
@@ -604,10 +657,14 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     background-color: var(--primary70);
     border-radius: 40px;
     box-shadow: var(--box-shadow);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .skills-slider:nth-of-type(2) {
     background-color: var(--secondary70);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .skills-slider h3 {
@@ -617,6 +674,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     margin: 0;
     text-align: center;
     margin-top: 60px;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .skills-slide-track {
@@ -648,10 +707,14 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
 
 .languages-slider .skills-card {
     background-color: color-mix(in srgb, var(--primary70) 97%, var(--primary));
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .programs-slider .skills-card {
     background-color: color-mix(in srgb, var(--secondary70) 90%, var(--secondary));
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .skills-card .skills-image {
@@ -665,6 +728,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
 	font-weight: 500;
 	text-align: center;
 	width: 100%;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .carousel-nav {
@@ -681,6 +746,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
 	font-size: 2rem;
 	padding: 0.5rem;
 	cursor: pointer;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .carousel-nav button:hover {
@@ -701,6 +768,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     width: 100%;
     font-size: 3rem;
     font-weight: 500;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .education .education-card {
@@ -709,6 +778,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     display: flex;
     flex-wrap: wrap;
     box-shadow: var(--box-shadow);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .education .education-card .card-text h3 {
@@ -716,12 +787,16 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     font-size: 2rem;
     margin: 0;
     display: inline-block;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .education .education-card .card-text p {
     color: var(--text);
     font-size: 1.25rem;
     margin-top: 10px;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .education .education-card .card-text h4 {
@@ -729,6 +804,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     font-size: 1.5rem;
     font-weight: 500;
     margin-top: 10px;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .education .education-card {
@@ -771,6 +848,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     flex-wrap: wrap;
     width: 100%;
     box-shadow: var(--box-shadow);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .portfolio .portfolio-card .card-text {
@@ -784,12 +863,16 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     font-size: 2rem;
     margin: 0;
     display: inline-block;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .portfolio .portfolio-card .card-text p {
     color: var(--text);
     font-size: 1.25rem;
     margin-top: 10px;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .portfolio .portfolio-card .card-text a {
@@ -799,6 +882,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
 .portfolio .portfolio-card .card-text .button-primary:hover {
     background-color: var(--primary30);
     color: var(--text);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .portfolio .portfolio-card img {
@@ -808,8 +893,6 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
 
 .contact {
     margin-top: 125px;
-    display: flex;
-    flex-wrap: wrap;
     gap: 40px;
     margin-bottom: 125px;
 }
@@ -820,6 +903,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     font-size: 3rem;
     font-weight: 500;
     padding: 20px 20px;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .contact .contact-card {
@@ -828,6 +913,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     width: 100%;
     padding: 20px 20px;
     background-color: var(--primary70);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .contact .contact-form {
@@ -838,6 +925,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     color: var(--text);
     font-size: 1.5rem;
     font-weight: 500;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .contact input, textarea {
@@ -848,6 +937,8 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     margin-top: 10px;
     margin-bottom: 30px;
     font-size: 1.5rem;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .contact .contact-submit-button {
@@ -864,12 +955,16 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
     font-size: 2rem;
     margin-top: 65px;
     display: inline-block;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .contact .contact-info p {
     color: var(--text);
     font-size: 1.25rem;
     margin-top: 10px;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 footer {
@@ -878,6 +973,8 @@ footer {
     color: var(--text);
     text-align: center;
     border-top: 1px solid var(--quarternary);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .back-to-top-button {
@@ -895,7 +992,8 @@ footer {
     -webkit-border-radius: 35px;
     -moz-border-radius: 35px;
     border-radius: 35px;
-    transition: all 0.3s ease;
+    transition: var(--transition03);
+    transition-property: var(--transition-all);
 }
 
 .show-back-to-top-button {
@@ -910,7 +1008,8 @@ footer {
     left: 16px;
     top: 13px;
     font-size: 19px;
-    transition: all 0.3s ease;
+    transition: var(--transition03);
+    transition-property: var(--transition-all);
 }
 
 .back-to-top-button:hover {
@@ -924,6 +1023,8 @@ footer {
   	text-shadow: 3px 3px #4C4C4C;
   	outline: 2px solid #000;
     font-size: 0.5rem;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .secret-themes-button:hover {
@@ -1027,7 +1128,8 @@ footer {
     }
     .nav {
         position: unset;
-        display: block;
+        visibility: visible;
+        opacity: 1;
         border: unset;
     }
     nav {
