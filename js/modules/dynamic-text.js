@@ -4,19 +4,18 @@ export function initDynamicText() {
 		const phrases = ['Software Developer', 'Full-Stack Developer', 'Web Designer', 'Mod Developer', 'Game Developer'];
 		let index = 0;
 		let isDeleting = false;
-		let currentText = '';
 		let charIndex = 0;
 		let isPaused = false;
 		let typingTimeout;
+		let currentText = ''
 
 		function type() {
-			if (isPaused) return;
-
 			const fullText = phrases[index];
 			if (isDeleting) {
 				currentText = fullText.substring(0, charIndex - 1);
 				charIndex--;
-			} else {
+			} 
+			else {
 				currentText = fullText.substring(0, charIndex + 1);
 				charIndex++;
 			}

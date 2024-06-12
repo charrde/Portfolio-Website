@@ -416,21 +416,21 @@ nav ul li a:hover {
 	transform: translateX(1.5em);
 }
 
-main .hero {
+.hero {
     padding: 20px 20px;
     margin-top: 25px;
 }
 
-main .hero .button-container {
+.hero .button-container {
     display: flex;
     flex-wrap: wrap;
 }
 
-main .hero .inner-container {
+.hero .inner-container {
     display: flex;
 }
 
-main .hero .inner-container:first-of-type {
+.hero .inner-container:first-of-type {
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
@@ -438,50 +438,55 @@ main .hero .inner-container:first-of-type {
     margin-bottom: 100px;
 }
 
-main .hero .inner-container:first-of-type h2 {
+.hero h2 {
     color: var(--text);
     margin-top: 15px;
     transition: var(--transition03);
     transition-property: var(--transition-colors);
 }
 
-main .hero .inner-container:first-of-type h2 span:first-of-type {
+.hero h2 span:first-of-type {
     color: var(--tertiary);
     transition: var(--transition03);
     transition-property: var(--transition-colors);
 }
 
-main .hero .inner-container:first-of-type h2:last-of-type span:first-of-type {
+.hero h2:last-of-type span:first-of-type {
     color: var(--primary);
     transition: var(--transition03);
     transition-property: var(--transition-colors);
 }
 
-main .hero .inner-container:first-of-type h2:not(:nth-of-type(2)) {
+.hero h2:not(:nth-of-type(2)) {
     font-weight: 500;
     font-size: 3.25rem;
 }
 
-main .hero .inner-container:first-of-type h2:nth-of-type(2) {
+.hero h2:nth-of-type(3) {
+    height: 200px;
+}
+
+.hero h2:nth-of-type(2) {
     font-weight: 600;
     font-size: 4.25rem;
 }
 
-main .hero .inner-container:nth-of-type(2) {
+.hero .inner-container:nth-of-type(2) {
     margin: 20px 20px;
     align-items: center;
 }
 
-main .hero .inner-container:nth-of-type(2) .headshot-container {
+.hero .headshot-container {
     width: 100%;
 }
 
-main .hero .inner-container:nth-of-type(2) .headshot-container img {
+.hero .headshot-container img {
     width: 100%;
 }
 
 .hero .hero-about-button {
     width: 100%;
+    margin-top: 0;
 }
 
 .hero .hero-contact-button {
@@ -948,6 +953,7 @@ main .hero .inner-container:nth-of-type(2) .headshot-container img {
 .contact .contact-info {
     width: 100%;
     text-align: center;
+    margin-bottom: 35px;
 }
 
 .contact .contact-info h3 {
@@ -1038,39 +1044,43 @@ footer {
 }
 
 @media (min-width: 800px) {
-    main .hero {
+    .hero {
         display: flex;
         margin-top: 75px;
     }
-    main .hero .inner-container:nth-of-type(2) .headshot-container {
+    .hero .inner-container:nth-of-type(2) .headshot-container {
         display: flex;
         justify-content: flex-end;
     }
-    main .hero .inner-container:first-of-type {
+    .hero .inner-container:first-of-type {
         width: 50%;
     }
-    main .hero .inner-container:nth-of-type(2) {
+    .hero .inner-container:nth-of-type(2) {
         width: 50%;
     }
-    main .hero .inner-container:first-of-type h2:not(:nth-of-type(2)) {
+    .hero h2:not(:nth-of-type(2)) {
         font-weight: 500;
         font-size: 2.5rem;
     }
-    
-    main .hero .inner-container:first-of-type h2:nth-of-type(2) {
+    .hero h2:nth-of-type(3) {
+        height: unset;
+    }
+    .hero .inner-container:first-of-type h2:nth-of-type(2) {
         font-weight: 600;
         font-size: 3rem;
     }
-    main .hero .button-container .button-secondary {
+    .hero .button-container .button-secondary {
         width: 200px;
     }
-    main .hero .inner-container:first-of-type {
+    .hero .inner-container:first-of-type {
         margin-bottom: 0px;
+    }
+    .hero .hero-about-button {
+        margin-top: 35px;
     }
     .about .cardbox {
         width: calc(50% - 20px);
     }
-    
     .about .hobbies-card {
         width: calc(50% - 20px);
     }

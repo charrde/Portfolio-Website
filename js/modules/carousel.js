@@ -144,7 +144,6 @@ export function initCarousel() {
 			});
 
 			if (window.innerWidth < 800) {
-				console.log('Starting auto slide...');
 				startAutoSlide();
 			}
 
