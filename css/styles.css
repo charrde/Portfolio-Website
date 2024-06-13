@@ -930,6 +930,8 @@ nav ul li a:hover {
 
 .portfolio h2 span {
     color: var(--tertiary);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .portfolio .portfolio-card {
@@ -1000,6 +1002,8 @@ nav ul li a:hover {
 
 .contact h2 span {
     color: var(--tertiary);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .contact .contact-card {
