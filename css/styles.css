@@ -926,6 +926,8 @@ nav ul li a:hover {
     width: 100%;
     font-size: 3rem;
     font-weight: 500;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
 }
 
 .portfolio h2 span {
