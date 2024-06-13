@@ -13,11 +13,10 @@
 
     <script type="module" src="js/main.js" defer=""></script>
     <script src="js/particles.js" defer=""></script>
-    <script src="js/app.js" defer=""></script>
 </head>
 <body id="particles-js">
     <header>
-        <section class="center-container">
+        <section class="center-container header">
             <div class="inner-container">
                 <h1>Patrick</h1>
                 <button class="menu">
@@ -33,14 +32,10 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#education">Education</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#portfolio">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                     <div class="theme-switch-mobile">
-                        <label class="switch">
-                            <input type="checkbox" class="theme-toggle">
-                            <span class="slider"><span></span></span>
-                        </label>
                     </div>
                 </nav>
             </div>
@@ -187,7 +182,7 @@
             </div>
         </section>
         <section id="portfolio" class="center-container portfolio">
-            <h2>Portfolio</h2>
+            <h2><span>My </span>Projects</h2>
             <div class="portfolio-card">
                 <screenshot id="porfolio-website" data-src="https://patrickskinner.netlify.app/"></screenshot>
                 <img src="img\screenshots\porfolio-website.png" alt="Porfolio Website">
@@ -220,7 +215,7 @@
             </div>
         </section>
         <section id="contact" class="contact">
-            <h2 class="center-container">Contact</h2>
+            <h2 class="center-container">Contact <span>Me</span></h2>
             <div class="center-container contact-card">
                 <div class="contact-form">
                     <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" onsubmit="this.submit(); this.reset(); return false;">

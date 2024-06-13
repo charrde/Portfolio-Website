@@ -14,7 +14,7 @@ let particleConfig = {
 			"type": "circle",
 			"stroke": {
 				"width": 0,
-				"color": "#151414"
+				"color": getComputedStyle(document.documentElement).getPropertyValue('--primary')
 			},
 			"polygon": {
 				"nb_sides": 5
@@ -109,4 +109,13 @@ let particleConfig = {
 	"retina_detect": true
 };
 
-particlesJS('particles-js', particleConfig);
+export function initParticles() {
+	document.addEventListener('DOMContentLoaded', () => {
+		particlesJS('particles-js', particleConfig);
+	});
+}
+
+export function refreshParticles() {
+	particleConfig.particles.color.value = getComputedStyle(document.documentElement).getPropertyValue('--primary');
+	particlesJS('particles-js', particleConfig);
+}

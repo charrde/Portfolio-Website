@@ -1,6 +1,8 @@
+import { refreshParticles } from "./particleConfig.js";
+
 const themes = {
-	light: ['light', 'pink-light', 'blue-light'],
-	dark: ['dark', 'pink-dark', 'blue-dark']
+	light: ['light', 'pink-light', 'blue-light', 'green-light', 'purple-light', 'orange-light'],
+	dark: ['dark', 'pink-dark', 'blue-dark', 'green-dark', 'purple-dark', 'orange-dark']
 };
 
 function getBaseTheme(currentTheme) {
@@ -19,26 +21,46 @@ function toggleThemeVariant(currentTheme) {
 	return currentTheme === 'light' ? 'dark' : 'light';
 }
 
+function moveThemeToggleButton() {
+	const themeToggleButton = document.querySelector('.switch');
+	const parentMobile = document.querySelector('.theme-switch-mobile');
+	const parentDesktop = document.querySelector('.theme-switch');
+	if (window.innerWidth < 800) {
+		if (!parentMobile.contains(themeToggleButton)) {
+			parentDesktop.removeChild(themeToggleButton);
+			parentMobile.appendChild(themeToggleButton);
+		}
+	} 
+	else if (window.innerWidth > 1100) {
+		if (!parentDesktop.contains(themeToggleButton)) {
+			parentMobile.removeChild(themeToggleButton);
+			parentDesktop.appendChild(themeToggleButton);
+		}
+	}
+}
+
 export function initThemeToggle() {
 	document.addEventListener('DOMContentLoaded', () => {
 		const themeToggleButtons = document.querySelectorAll('.theme-toggle');
 		const storedTheme = localStorage.getItem('theme') || 'light';
 		const baseTheme = getBaseTheme(storedTheme);
-		
+
+		window.addEventListener('resize', moveThemeToggleButton);
+		window.addEventListener('load', moveThemeToggleButton);
+
 		document.documentElement.setAttribute('data-theme', baseTheme);
 		localStorage.setItem('theme', baseTheme);
-
 		themeToggleButtons.forEach(button => {
 			button.addEventListener('click', () => {
 				const currentTheme = document.documentElement.getAttribute('data-theme');
 				const newTheme = toggleThemeVariant(currentTheme);
 				document.documentElement.setAttribute('data-theme', newTheme);
 				localStorage.setItem('theme', newTheme);
+				refreshParticles();
 			});
 		});
 	});
 }
-
 
 export function initSecretThemeButton() {
 	document.addEventListener('DOMContentLoaded', () => {
@@ -55,7 +77,7 @@ export function initSecretThemeButton() {
 
 			document.documentElement.setAttribute('data-theme', newTheme);
 			localStorage.setItem('theme', newTheme);
+			refreshParticles();
 		});
 	});
 }
-

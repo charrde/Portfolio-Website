@@ -1,16 +1,20 @@
-import { toggleMenu, hideMenuOnClick } from './modules/dropdown-toggle.js';
-import { initThemeToggle, initSecretThemeButton } from './modules/theme-switch.js';
-import { initScrollEffect } from './modules/shrinking-header.js';
-import { initDynamicText } from './modules/dynamic-text.js';
+import { toggleMenu, hideMenuOnClick } from './modules/toggleNavMenu.js';
+import { initThemeToggle, initSecretThemeButton } from './modules/themeToggle.js';
+import { initHeaderShrink } from './modules/headerShrink.js';
+import { initDynamicText } from './modules/dynamicText.js';
 import { initCarousel } from './modules/carousel.js';
+import { initActiveHoverReplace } from './modules/activeHoverReplace.js';
+import { initParticles } from './modules/particleConfig.js';
 
 initCarousel();
 toggleMenu();
 hideMenuOnClick();
 initThemeToggle();
-initScrollEffect();
+initHeaderShrink();
 initDynamicText();
 initSecretThemeButton();
+initActiveHoverReplace();
+initParticles();
 
 const backToTopButton = document.querySelector('.back-to-top-button');
 

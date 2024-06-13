@@ -10,7 +10,7 @@ html {
     0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
     0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
     0 3.5px 6px hsla(0, 0%, 0%, 0.09);
-    --transition-colors: color, background-color, border-color, color-mix, box-shadow, linear-gradient;
+    --transition-colors: color, background-color, border-color, color-mix, box-shadow, linear-gradient, outline-color;
     --transition-all: all;
     --transition03: 0.3s ease;
     --transition05: 0.5s ease;
@@ -95,6 +95,7 @@ html {
     --theme-accent: #EBEAEB;
 }
 
+
 :root[data-theme="blue-dark"] {
     --text: #f7f7f8;
     --static-white: #f6f4f5;
@@ -111,12 +112,108 @@ html {
     --theme-accent: #151414;
 }
 
+:root[data-theme="green-light"] {
+    --text: #151e06;
+    --static-white: #f6f4f5;
+    --background: #fdfefb;
+    --primary: #9cd43a;
+    --primary70: #E9F5D5;
+    --primary30: #F8FCF1;
+    --secondary: #E1F6D9;
+    --secondary70: #F3FBEF;
+    --tertiary: #9ee58b;
+    --quarternary: #F1F2EE;
+    --accent: #72dd64;
+    --theme-toggle: #9cd43a;
+    --theme-accent: #EBEAEB;
+}
+
+:root[data-theme="green-dark"] {
+    --text: #f0f9e1;
+    --static-white: #f6f4f5;
+    --background: #030401;
+    --primary: #8cc52b;
+    --primary70: #1E2A0A;
+    --primary30: #0A0E03;
+    --secondary: #102609;
+    --secondary70: #081004;
+    --tertiary: #2e741a;
+    --quarternary: #10110D;
+    --accent: #3b7d3b;
+    --theme-toggle: #8cc52b;
+    --theme-accent: #151414;
+}
+
+:root[data-theme="purple-light"] {
+    --text: #100c17;
+    --static-white: #f6f4f5;
+    --background: #f7f4fb;
+    --primary: #6e37cd;
+    --primary70: #DCCEF2;
+    --primary30: #F0EBF8;
+    --secondary: #E2D6F7;
+    --secondary70: #F0EAF9;
+    --tertiary: #b491ee;
+    --quarternary: #EAE8EF;
+    --accent: #8d4ef4;
+    --theme-toggle: #6e37cd;
+    --theme-accent: #EBEAEB;
+}
+
+:root[data-theme="purple-dark"] {
+    --text: #ece8f3;
+    --static-white: #f6f4f5;
+    --background: #07040b;
+    --primary: #6932c8;
+    --primary70: #1B0D31;
+    --primary30: #0C0614;
+    --secondary: #150829;
+    --secondary70: #0B0615;
+    --tertiary: #35116e;
+    --quarternary: #151619;
+    --accent: #4b0bb1;
+    --theme-toggle: #6932c8;
+    --theme-accent: #151414;
+}
+
+:root[data-theme="orange-light"] {
+    --text: #1e0e06;
+    --static-white: #f6f4f5;
+    --background: #f9f4f1;
+    --primary: #f5a623;
+    --primary70: #FCE3C6;
+    --primary30: #FDF0E6;
+    --secondary: #F8E8D4;
+    --secondary70: #FDF0E6;
+    --tertiary: #f5a623;
+    --quarternary: #FDF0E6;
+    --accent: #f5a623;
+    --theme-toggle: #f5a623;
+    --theme-accent: #EBEAEB;
+}
+
+:root[data-theme="orange-dark"] {
+    --text: #f7f7f8;
+    --static-white: #f6f4f5;
+    --background: #0a0603;
+    --primary: #f5a623;
+    --primary70: #1F1206;
+    --primary30: #0F0904;
+    --secondary: #1A0E05;
+    --secondary70: #0F0904;
+    --tertiary: #f5a623;
+    --quarternary: #0F0904;
+    --accent: #f5a623;
+    --theme-toggle: #f5a623;
+    --theme-accent: #151414;
+}
+
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--text);
     transition: var(--transition03);
-    transition-property: var(--transition-colors);
+    transition-property: var(--transition-colors), font-size;
 }
 
 .center-container {
@@ -250,13 +347,6 @@ header .inner-container {
     transition: padding 0.3s ease, font-size 0.3s ease;
 }
 
-header .inner-container h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--text);
-    transition: font-size 0.3s ease;
-}
-
 .center-container.shrink {
     padding: 10px 20px;
 }
@@ -334,10 +424,6 @@ nav ul li a:hover {
     background-color: var(--primary30);
 }
 
-.theme-switch {
-    display: none;
-}
-
 .theme-switch-mobile {
     display: flex;
     padding: 20px 20px;
@@ -389,7 +475,6 @@ nav ul li a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: var(--text);
 }
 
 .slider::after {
@@ -397,7 +482,6 @@ nav ul li a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: var(--text);
 }
 
 .slider span {
@@ -561,7 +645,7 @@ nav ul li a:hover {
 
 .about .bio-card {
     background-color: var(--primary70);
-    padding: 40px 40px 40px 40px;
+    padding: 60px;
     border-radius: 40px;
     box-shadow: var(--box-shadow);
     transition: var(--transition03);
@@ -574,7 +658,7 @@ nav ul li a:hover {
 
 .about .hobbies-card {
     background-color: var(--secondary70);
-    padding: 40px 40px 40px 40px;
+    padding: 60px;
     border-radius: 40px;
     box-shadow: var(--box-shadow);
     transition: var(--transition03);
@@ -610,7 +694,7 @@ nav ul li a:hover {
 
 .about .resume-card {
     background-color: var(--primary30);
-    padding: 40px 40px 40px 40px;
+    padding: 60px;
     border-radius: 40px;
     margin-top: 40px;
     box-shadow: var(--box-shadow);
@@ -679,6 +763,7 @@ nav ul li a:hover {
     margin: 0;
     text-align: center;
     margin-top: 60px;
+    margin-bottom: 60px;
     transition: var(--transition03);
     transition-property: var(--transition-colors);
 }
@@ -687,6 +772,7 @@ nav ul li a:hover {
 	display: flex;
 	transition: transform 0.5s ease;
 	will-change: transform;
+    flex-grow: 1;
 }
 
 .skills-slide {
@@ -695,12 +781,10 @@ nav ul li a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    padding: 40px 40px 40px 40px;
 }
 
 .skills-card {
 	width: 100%;
-	padding: 40px;
 	border-radius: 40px;
 	justify-content: center;
 	margin: 0;
@@ -711,13 +795,11 @@ nav ul li a:hover {
 
 
 .languages-slider .skills-card {
-    background-color: color-mix(in srgb, var(--primary70) 97%, var(--primary));
     transition: var(--transition03);
     transition-property: var(--transition-colors);
 }
 
 .programs-slider .skills-card {
-    background-color: color-mix(in srgb, var(--secondary70) 90%, var(--secondary));
     transition: var(--transition03);
     transition-property: var(--transition-colors);
 }
@@ -740,8 +822,8 @@ nav ul li a:hover {
 .carousel-nav {
 	display: flex;
 	justify-content: center;
-	transform: translateY(-50%);
     gap: 20px;
+    margin: 60px;
 }
 
 .carousel-nav button {
@@ -819,7 +901,7 @@ nav ul li a:hover {
 
 .education .education-card .card-text {
     width: 100%;
-    padding: 40px 40px 40px 40px;
+    padding: 60px;
 }
 
 .education .education-card .card-image {
@@ -846,6 +928,10 @@ nav ul li a:hover {
     font-weight: 500;
 }
 
+.portfolio h2 span {
+    color: var(--tertiary);
+}
+
 .portfolio .portfolio-card {
     background-color: var(--primary70);
     border-radius: 40px;
@@ -859,7 +945,7 @@ nav ul li a:hover {
 
 .portfolio .portfolio-card .card-text {
     width: 100%;
-    padding: 40px 40px 40px 40px;
+    padding: 60px;
 }
 
 .portfolio .portfolio-card .card-text h3 {
@@ -912,6 +998,10 @@ nav ul li a:hover {
     transition-property: var(--transition-colors);
 }
 
+.contact h2 span {
+    color: var(--tertiary);
+}
+
 .contact .contact-card {
     display: flex;
     flex-wrap: wrap;
@@ -941,13 +1031,28 @@ nav ul li a:hover {
     border: 1px solid var(--quarternary);
     margin-top: 10px;
     margin-bottom: 30px;
+    resize: none;
     font-size: 1.5rem;
     transition: var(--transition03);
     transition-property: var(--transition-colors);
+    outline-width: 3px;
+    outline-color: var(--primary70);
+    outline-style: solid;
+}
+
+.contact input:focus, textarea:focus {
+    outline-width: 3px;
+    outline-color: var(--accent);
+    outline-style: solid;
 }
 
 .contact .contact-submit-button {
     width: 100%;
+}
+
+.contact .contact-submit-button:hover {
+    background-color: var(--primary30);
+    color: var(--text);
 }
 
 .contact .contact-info {
@@ -1097,13 +1202,16 @@ footer {
     .skills-slide-track {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         transform: none;
     }
     .skills-slide {
-        width: calc(50% - 20px);
-        margin: 10px;
+        width: calc(33.333% - 20px);
+        margin-left: 25px;
         transition: none;
+    }
+    .skills .skills-image {
+        width: 100px;
     }
     .carousel-nav {
         display: none;
@@ -1121,10 +1229,19 @@ footer {
     .portfolio .portfolio-card {
         width: calc(50% - 20px);
     }
+    .skills-slider {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 40px;
+    }
+    .skills-slider h3 {
+        display: none;
+    }
     .contact .contact-card {
         border-radius: 40px;
         box-shadow: var(--box-shadow);
-        padding: 40px 40px 40px 40px;
+        padding: 60px;
     }
     
     .contact input, textarea {
@@ -1149,9 +1266,16 @@ footer {
         display: flex;
         flex-direction: row;
         margin: 0;
+        justify-content: flex-end;
     }
     nav ul li {
         margin-right: 20px;
+    }
+    header .inner-container {
+        width: unset;
+    }
+    .center-container.shrink {
+        padding: 0px 20px;
     }
     .about .cardbox {
         width: calc(65% - 20px);
@@ -1159,16 +1283,13 @@ footer {
     .about .hobbies-card {
         width: calc(35% - 20px);
     }
-    .theme-switch {
-        display: block;
-    }
-    .theme-switch-mobile {
-        display: none;
-    }
 	.skills-slide {
-		width: calc(33.333% - 20px);
+        width: unset;
 	}
     .portfolio .portfolio-card {
         width: calc((100% - 80px) / 3);
+    }
+    .theme-switch-mobile {
+        display: none;
     }
 }
