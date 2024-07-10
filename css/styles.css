@@ -945,17 +945,18 @@ nav ul li a:hover {
     box-shadow: var(--box-shadow);
     transition: var(--transition03);
     transition-property: var(--transition-colors);
+    min-height: 680px;
 }
 
 .portfolio .portfolio-card .card-text {
     width: 100%;
-    padding: 60px;
+    padding: 40px;
 }
 
 .portfolio .portfolio-card .card-text h3 {
     white-space: nowrap;
     color: var(--text);
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0;
     display: inline-block;
     transition: var(--transition03);
@@ -972,6 +973,29 @@ nav ul li a:hover {
 
 .portfolio .portfolio-card .card-text a {
     width: 100%;
+}
+
+.portfolio .portfolio-card .card-text .read-more {
+    display: none;
+}
+
+.portfolio .portfolio-card .card-text .read-more-button {
+    color: var(--tertiary);
+}
+
+.portfolio .portfolio-card .card-text .read-less-button {
+    color: var(--tertiary);
+    display: none;
+}
+
+.portfolio .portfolio-card .card-text .read-more-button:hover {
+    cursor: pointer;
+    background-color: var(--primary30);
+}
+
+.portfolio .portfolio-card .card-text .read-less-button:hover {
+    cursor: pointer;
+    background-color: var(--primary30);
 }
 
 .portfolio .portfolio-card .card-text .button-primary:hover {

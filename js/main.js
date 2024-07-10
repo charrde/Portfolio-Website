@@ -26,3 +26,24 @@ window.addEventListener('scroll', () => {
         backToTopButton.classList.remove('show-back-to-top-button');
     }
 });
+
+const readMoreButton = document.querySelector('.read-more-button');
+const readLessButton = document.querySelector('.read-less-button');
+
+readMoreButton.addEventListener('click', function() {
+    const targettedParagraph = readMoreButton.parentElement;
+    const readLessButton = targettedParagraph.querySelector('.read-less-button')
+    const readMoreContents = targettedParagraph.querySelector('.read-more');
+    readMoreContents.style.display = 'unset';
+    readMoreButton.style.display = 'none';
+    readLessButton.style.display = 'unset';
+});
+
+readLessButton.addEventListener('click', function() {
+    const targettedParagraph = readLessButton.parentElement;
+    const readMoreButton = targettedParagraph.querySelector('.read-more-button')
+    const readMoreContents = targettedParagraph.querySelector('.read-more');
+    readMoreContents.style.display = 'none';
+    readMoreButton.style.display = 'unset';
+    readLessButton.style.display = 'none';
+});
