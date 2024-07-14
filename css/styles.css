@@ -30,6 +30,8 @@ html {
     --accent: #e95d5d;
     --theme-toggle: #FFD700;
     --theme-accent: #EBEAEB;
+    --portfolio-badge-colour-school: #2ecc70;
+    --portfolio-badge-colour-personal: #b98dc7;
 }
 :root[data-theme="dark"] {
     --text: #d4d4d4;
@@ -45,6 +47,8 @@ html {
     --accent: #a21616;
     --theme-toggle: #1E3A8A;
     --theme-accent: #151414;
+    --portfolio-badge-colour-school: #118046;
+    --portfolio-badge-colour-personal: #8d43ad;
 }
 
 :root[data-theme="pink-light"] {
@@ -946,6 +950,27 @@ nav ul li a:hover {
     transition: var(--transition03);
     transition-property: var(--transition-colors);
     min-height: 680px;
+    position: relative;
+}
+
+.portfolio .portfolio-card .portfolio-badge {
+    position: absolute;
+    padding: 10px 20px;
+    top: -40px;
+    right: 0;
+    display: inline-block;
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
+    color: var(--text);
+    border-radius: 20px;
+}
+
+.portfolio-badge.school-project-badge {
+    background-color: var(--portfolio-badge-colour-school);
+}
+
+.portfolio-badge.personal-project-badge {
+    background-color: var(--portfolio-badge-colour-personal);
 }
 
 .portfolio .portfolio-card .card-text {
@@ -1318,6 +1343,9 @@ footer {
 	}
     .portfolio .portfolio-card {
         width: calc((100% - 80px) / 3);
+    }
+    .portfolio .portfolio-card .portfolio-badge {
+        right: -15px;
     }
     .theme-switch-mobile {
         display: none;
