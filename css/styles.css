@@ -213,7 +213,7 @@ html {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text);
     transition: var(--transition03);
@@ -339,8 +339,7 @@ header .center-container {
     position: relative;
     display: flex;
     align-items: center;
-    padding: 20px 20px;
-    transition: padding 0.3s ease, height 0.3s ease;
+    padding: 10px 20px;
 }
 
 header .inner-container {
@@ -348,7 +347,6 @@ header .inner-container {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    transition: padding 0.3s ease, font-size 0.3s ease;
 }
 
 .center-container.shrink {
@@ -1305,6 +1303,9 @@ footer {
 }
 
 @media(min-width: 1100px) {
+    h1 {
+        font-size: 2rem;
+    }
     .menu {
         display: none;
     }
@@ -1325,6 +1326,14 @@ footer {
     }
     nav ul li {
         margin-right: 20px;
+    }
+    header .center-container {
+        transition: padding 0.3s ease, height 0.3s ease;
+        padding: 20px 20px;
+    }
+    
+    header .inner-container {
+        transition: padding 0.3s ease, font-size 0.3s ease;
     }
     header .inner-container {
         width: unset;

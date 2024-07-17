@@ -5,7 +5,7 @@ function updateStyles() {
 		let sheet = document.styleSheets[i];
 		if (sheet.href && sheet.href.includes(targetHref)) {
 			try {
-				let rules = sheet.cssRules || sheet.rules;
+				let rules = sheet.cssRules;
 				if (rules) {
 					for (let j = 0; j < rules.length; j++) {
 						let rule = rules[j];

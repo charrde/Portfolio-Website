@@ -25,7 +25,7 @@ function moveThemeToggleButton() {
 	const themeToggleButton = document.querySelector('.switch');
 	const parentMobile = document.querySelector('.theme-switch-mobile');
 	const parentDesktop = document.querySelector('.theme-switch');
-	if (window.innerWidth < 800) {
+	if (window.innerWidth < 1100) {
 		if (!parentMobile.contains(themeToggleButton)) {
 			parentDesktop.removeChild(themeToggleButton);
 			parentMobile.appendChild(themeToggleButton);
