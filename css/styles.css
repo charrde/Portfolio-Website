@@ -65,6 +65,8 @@ html {
     --accent: #ea5d90;
     --theme-toggle: #cf306a;
     --theme-accent: #EBEAEB;
+    --portfolio-badge-colour-school: #2ecc70;
+    --portfolio-badge-colour-personal: #b98dc7;
 }
 
 :root[data-theme="pink-dark"] {
@@ -81,6 +83,8 @@ html {
     --accent: #a21549;
     --theme-toggle: #82173e;
     --theme-accent: #151414;
+    --portfolio-badge-colour-school: #118046;
+    --portfolio-badge-colour-personal: #8d43ad;
 }
 
 :root[data-theme="blue-light"] {
@@ -97,6 +101,8 @@ html {
     --accent: #477df1;
     --theme-toggle: #5376c1;
     --theme-accent: #EBEAEB;
+    --portfolio-badge-colour-school: #2ecc70;
+    --portfolio-badge-colour-personal: #b98dc7;
 }
 
 
@@ -114,6 +120,8 @@ html {
     --accent: #0e44b9;
     --theme-toggle: #3e61ac;
     --theme-accent: #151414;
+    --portfolio-badge-colour-school: #118046;
+    --portfolio-badge-colour-personal: #8d43ad;
 }
 
 :root[data-theme="green-light"] {
@@ -130,6 +138,8 @@ html {
     --accent: #72dd64;
     --theme-toggle: #9cd43a;
     --theme-accent: #EBEAEB;
+    --portfolio-badge-colour-school: #2ecc70;
+    --portfolio-badge-colour-personal: #b98dc7;
 }
 
 :root[data-theme="green-dark"] {
@@ -146,6 +156,8 @@ html {
     --accent: #3b7d3b;
     --theme-toggle: #8cc52b;
     --theme-accent: #151414;
+    --portfolio-badge-colour-school: #118046;
+    --portfolio-badge-colour-personal: #8d43ad;
 }
 
 :root[data-theme="purple-light"] {
@@ -162,6 +174,8 @@ html {
     --accent: #8d4ef4;
     --theme-toggle: #6e37cd;
     --theme-accent: #EBEAEB;
+    --portfolio-badge-colour-school: #2ecc70;
+    --portfolio-badge-colour-personal: #b98dc7;
 }
 
 :root[data-theme="purple-dark"] {
@@ -178,6 +192,8 @@ html {
     --accent: #4b0bb1;
     --theme-toggle: #6932c8;
     --theme-accent: #151414;
+    --portfolio-badge-colour-school: #118046;
+    --portfolio-badge-colour-personal: #8d43ad;
 }
 
 :root[data-theme="orange-light"] {
@@ -194,6 +210,8 @@ html {
     --accent: #f5a623;
     --theme-toggle: #f5a623;
     --theme-accent: #EBEAEB;
+    --portfolio-badge-colour-school: #2ecc70;
+    --portfolio-badge-colour-personal: #b98dc7;
 }
 
 :root[data-theme="orange-dark"] {
@@ -210,6 +228,8 @@ html {
     --accent: #f5a623;
     --theme-toggle: #f5a623;
     --theme-accent: #151414;
+    --portfolio-badge-colour-school: #118046;
+    --portfolio-badge-colour-personal: #8d43ad;
 }
 
 h1 {
