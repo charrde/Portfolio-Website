@@ -4,6 +4,7 @@ html {
     touch-action: manipulation;
 }
 
+
 :root {
     --box-shadow: inset 0 0 0.5px 1px hsl(0, 0%, 50%, 0.075),
     0 0 0 1px hsla(0, 0%, 0%, 0.05),
@@ -525,6 +526,8 @@ nav ul li a:hover {
 .hero {
     padding: 20px 20px;
     margin-top: 25px;
+    flex-wrap: wrap;
+    display: flex;
 }
 
 .hero .button-container {
@@ -542,6 +545,20 @@ nav ul li a:hover {
     width: 100%;
     justify-content: center;
     margin-bottom: 100px;
+}
+
+.hero .inner-container:last-of-type {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.hero .inner-container:last-of-type .socials {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 }
 
 .hero h2 {
@@ -1180,6 +1197,26 @@ footer {
     transition-property: var(--transition-all);
 }
 
+.socials {
+    position: fixed;
+    display: flex;
+    gap: 1rem;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--text);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.socials a {
+    font-size: 1rem;
+    color: var(--background);
+    transition: var(--transition03);
+    transition-property: var(--transition-colors);
+}
+
 .show-back-to-top-button {
     visibility: visible;
     opacity: 1;
@@ -1189,7 +1226,7 @@ footer {
     color: #fff;
     margin: 0;
     position: relative;
-    left: 16px;
+    left: 15px;
     top: 13px;
     font-size: 19px;
     transition: var(--transition03);
@@ -1231,10 +1268,10 @@ footer {
         justify-content: flex-end;
     }
     .hero .inner-container:first-of-type {
-        width: 50%;
+        width: calc(50% - 20px);
     }
     .hero .inner-container:nth-of-type(2) {
-        width: 50%;
+        width: calc(50% - 20px);
     }
     .hero h2:not(:nth-of-type(2)) {
         font-weight: 500;
