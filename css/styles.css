@@ -1181,7 +1181,7 @@ footer {
 .back-to-top-button {
     background-color: var(--primary);
     color: var(--text);
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
     width: 50px;
@@ -1197,8 +1197,15 @@ footer {
     transition-property: var(--transition-all);
 }
 
+.edge-container {
+    max-width: 1800px;
+    margin: 0 auto;
+    position: sticky;
+    bottom: 0;
+}
+
 .socials {
-    position: fixed;
+    position: absolute;
     display: flex;
     gap: 1rem;
     bottom: 20px;
@@ -1206,7 +1213,7 @@ footer {
     background-color: var(--text);
     transition: var(--transition03);
     transition-property: var(--transition-colors);
-    padding: 0.5rem;
+    padding: 0.5rem 15px;
     border-radius: 10px;
 }
 
