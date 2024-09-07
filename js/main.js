@@ -18,6 +18,9 @@ initParticles();
 
 const backToTopButton = document.querySelector('.back-to-top-button');
 
+window.addEventListener('scroll', checkIfBottom);
+window.addEventListener('resize', checkIfBottom);
+
 window.addEventListener('scroll', () => {
     if (window.scrollY > 500) {
         backToTopButton.classList.add('show-back-to-top-button');
@@ -26,6 +29,24 @@ window.addEventListener('scroll', () => {
         backToTopButton.classList.remove('show-back-to-top-button');
     }
 });
+
+function isBottomOfPage() {
+	let scrollPosition = window.scrollY;
+	let documentHeight = document.documentElement.scrollHeight;
+	let windowHeight = window.innerHeight;
+	return (windowHeight + scrollPosition >= documentHeight - 1);
+}
+
+function checkIfBottom() {
+	if (isBottomOfPage()) {
+        document.querySelector('#socials').style.visibility = 'hidden';
+        document.querySelector('#socials').style.opacity = '0';
+	}
+    else {
+        document.querySelector('#socials').style.visibility = 'visible';
+        document.querySelector('#socials').style.opacity = '1';
+    }
+}
 
 const readMoreButton = document.querySelector('.read-more-button');
 const readLessButton = document.querySelector('.read-less-button');
