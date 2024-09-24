@@ -1006,6 +1006,7 @@ nav ul li a:hover {
 
 .portfolio .portfolio-card .card-text {
     width: 100%;
+    height: 75%;
     padding: 40px;
 }
 
@@ -1027,7 +1028,7 @@ nav ul li a:hover {
     transition-property: var(--transition-colors);
 }
 
-.portfolio .portfolio-card .card-text a {
+.portfolio .portfolio-card .card-buttons a {
     width: 100%;
 }
 
@@ -1054,7 +1055,7 @@ nav ul li a:hover {
     background-color: var(--primary30);
 }
 
-.portfolio .portfolio-card .card-text .button-primary:hover {
+.portfolio .portfolio-card .card-buttons .button-primary:hover {
     background-color: var(--primary30);
     color: var(--text);
     transition: var(--transition03);
