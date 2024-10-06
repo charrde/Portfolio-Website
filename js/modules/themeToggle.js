@@ -42,7 +42,7 @@ function moveThemeToggleButton() {
 export function initThemeToggle() {
 	document.addEventListener('DOMContentLoaded', () => {
 		const themeToggleButtons = document.querySelectorAll('.theme-toggle');
-		const storedTheme = localStorage.getItem('theme') || 'light';
+		const storedTheme = localStorage.getItem('theme') || 'dark';
 		const baseTheme = getBaseTheme(storedTheme);
 
 		window.addEventListener('resize', moveThemeToggleButton);
