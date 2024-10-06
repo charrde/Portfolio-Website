@@ -48,23 +48,33 @@ function checkIfBottom() {
     }
 }
 
-const readMoreButton = document.querySelector('.read-more-button');
-const readLessButton = document.querySelector('.read-less-button');
+const readMoreButtons = document.querySelectorAll('.read-more-button');
+const readLessButtons = document.querySelectorAll('.read-less-button');
 
-readMoreButton.addEventListener('click', function() {
-    const targettedParagraph = readMoreButton.parentElement;
-    const readLessButton = targettedParagraph.querySelector('.read-less-button')
-    const readMoreContents = targettedParagraph.querySelector('.read-more');
-    readMoreContents.style.display = 'unset';
-    readMoreButton.style.display = 'none';
-    readLessButton.style.display = 'unset';
+readMoreButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const card = this.closest('.portfolio-card');
+
+        const readLessButton = card.querySelector('.read-less-button')
+        const readMoreButton = card.querySelector('.read-more-button')
+        const readMoreContents = card.querySelector('.read-more');
+
+        readMoreContents.style.display = 'unset';
+        readMoreButton.style.display = 'none';
+        readLessButton.style.display = 'unset';
+    });
 });
 
-readLessButton.addEventListener('click', function() {
-    const targettedParagraph = readLessButton.parentElement;
-    const readMoreButton = targettedParagraph.querySelector('.read-more-button')
-    const readMoreContents = targettedParagraph.querySelector('.read-more');
-    readMoreContents.style.display = 'none';
-    readMoreButton.style.display = 'unset';
-    readLessButton.style.display = 'none';
+
+readLessButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const card = this.closest('.portfolio-card');
+
+        const readMoreButton = card.querySelector('.read-more-button')
+        const readLessButton = card.querySelector('.read-less-button')
+        const readMoreContents = card.querySelector('.read-more');
+        readMoreContents.style.display = 'none';
+        readMoreButton.style.display = 'unset';
+        readLessButton.style.display = 'none';
+    });
 });
