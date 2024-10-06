@@ -267,6 +267,7 @@ h1 {
     margin-top: 35px;
     transition: var(--transition03);
     transition-property: var(--transition-colors);
+    width: 100%;
 }
 
 .button-primary:hover {
