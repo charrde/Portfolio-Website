@@ -949,6 +949,13 @@ nav ul li a:hover {
     border-top-right-radius: 40px;
 }
 
+.portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr;  /* Default for mobile */
+    gap: 2rem;
+    width: 100%;
+}
+
 .portfolio {
     padding: 20px 20px;
     margin-top: 125px;
@@ -1066,6 +1073,17 @@ nav ul li a:hover {
 .portfolio .portfolio-card img {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+}
+
+.show-more-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.toggle-projects-button {
+    width: 370px;
+    height: 100px;
 }
 
 .contact {
@@ -1405,8 +1423,8 @@ footer .footer-nav {
         border-top-right-radius: 0px;
         border-bottom-left-radius: 40px;
     }
-    .portfolio .portfolio-card {
-        width: calc(50% - 20px);
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
     }
     .skills-slider {
         display: flex;
@@ -1480,6 +1498,12 @@ footer .footer-nav {
     header .inner-container {
         width: unset;
     }
+    .portfolio-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .portfolio .portfolio-card {
+        width: 100%;
+    }
     .center-container.shrink {
         padding: 0px 20px;
     }
@@ -1492,9 +1516,6 @@ footer .footer-nav {
 	.skills-slide {
         width: unset;
 	}
-    .portfolio .portfolio-card {
-        width: calc((100% - 80px) / 3);
-    }
     .portfolio .portfolio-card .portfolio-badge {
         right: -15px;
     }

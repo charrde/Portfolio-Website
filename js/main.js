@@ -78,3 +78,33 @@ readLessButtons.forEach(button => {
         readLessButton.style.display = 'none';
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const portfolioContainer = document.querySelector('.portfolio-container');
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    const toggleButton = document.querySelector('.toggle-projects-button');
+    const cardsToShow = 6;
+    let isExpanded = false;
+
+    // Initial hide of extra cards
+    portfolioCards.forEach((card, index) => {
+        if (index >= cardsToShow) {
+            card.style.display = 'none';
+        } else {
+            card.style.display = 'flex';
+        }
+    });
+
+    // Toggle button functionality
+    toggleButton.addEventListener('click', () => {
+        isExpanded = !isExpanded;
+        
+        portfolioCards.forEach((card, index) => {
+            if (index >= cardsToShow) {
+                card.style.display = isExpanded ? 'flex' : 'none';
+            }
+        });
+
+        toggleButton.textContent = isExpanded ? 'Show Less Projects' : 'Show More Projects';
+    });
+});
