@@ -114,7 +114,6 @@
         <section id="skills" class="center-container skills">
             <h2>Skills</h2>
             <div class="skills-slider languages-slider" id="languages-slider">
-                <h3>Languages &amp; Frameworks</h3>
                 <div class="skills-slide-track">
                     <div class="skills-slide">
                         <div class="skills-card">
@@ -164,15 +163,6 @@
                             <h4>Blazor</h4>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-nav">
-                    <button id="languages-prev">&lt;</button>
-                    <button id="languages-next">&gt;</button>
-                </div>
-            </div>
-            <div class="skills-slider programs-slider" id="programs-slider">
-                <h3>Programs</h3>
-                <div class="skills-slide-track">
                     <div class="skills-slide">
                         <div class="skills-card">
                             <div class="skills-image"><img src="img/visualstudio.svg" alt="Visual Studio"></div>
@@ -203,10 +193,100 @@
                             <h4>Linqpad</h4>
                         </div>
                     </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/intellij.svg" alt="IntelliJ"></div>
+                            <h4>IntelliJ IDEA</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/flutter.svg" alt="Flutter"></div>
+                            <h4>Flutter</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/dart.svg" alt="Dart"></div>
+                            <h4>Dart</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/java.svg" alt="Java"></div>
+                            <h4>Java</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/androidstudio.svg" alt="android studio"></div>
+                            <h4>Android Studio</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/pinia.svg" alt="Pinia"></div>
+                            <h4>Pinia</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/vue.svg" alt="Vue"></div>
+                            <h4>Vue</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/nuxt.svg" alt="Nuxt"></div>
+                            <h4>Nuxt</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/tailwind.svg" alt="tailwind"></div>
+                            <h4>TailwindCSS</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/postgresql.svg" alt="postgresql"></div>
+                            <h4>PostgreSQL</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/git.svg" alt="Git"></div>
+                            <h4>Git</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/github.svg" alt="Github"></div>
+                            <h4>GitHub</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/markdown.svg" alt="Markdown"></div>
+                            <h4>Markdown</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/materialui.svg" alt="materialui"></div>
+                            <h4>MaterialUI</h4>
+                        </div>
+                    </div>
+                    <div class="skills-slide">
+                        <div class="skills-card">
+                            <div class="skills-image"><img src="img/tauri.svg" alt="Tauri"></div>
+                            <h4>Tauri</h4>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-nav">
-                    <button id="programs-prev">&lt;</button>
-                    <button id="programs-next">&gt;</button>
+                    <button id="languages-prev">&lt;</button>
+                    <button id="languages-next">&gt;</button>
                 </div>
             </div>
         </section>
@@ -233,8 +313,9 @@
                         <p>A website all about me, my resume, and my portfolio.</p>
                         <div class="card-buttons">
                             <a href="https://github.com/charrde/Portfolio-Website" target="_blank"
-                                class="button-github">View on Github</a>
-                            <a href="https://patrickskinner.netlify.app/" target="_blank" class="button-primary">Explore</a>
+                                class="button-github"><i class="bi bi-github"></i>View on Github</a>
+                            <a href="https://patrickskinner.netlify.app/" target="_blank" class="button-primary"><i
+                                    class="bi bi-box-arrow-up-right"></i>Explore</a>
                         </div>
                     </div>
                     <p class="portfolio-badge personal-project-badge">
@@ -247,8 +328,12 @@
                     <div class="card-text">
                         <h3>Virtual Turntable</h3>
                         <p>A music player with a unique turntable.</p>
-                        <a href="https://github.com/charrde/virtual-turntable" target="_blank" class="button-github">View on Github</a>
-                        <a href="https://turntable.patski.dev/" target="_blank" class="button-primary">Explore</a>
+                        <div class="card-buttons">
+                            <a href="https://github.com/charrde/virtual-turntable" target="_blank"
+                                class="button-github"><i class="bi bi-github"></i>View on Github</a>
+                            <a href="https://turntable.patski.dev/" target="_blank" class="button-primary"><i
+                                    class="bi bi-box-arrow-up-right"></i>Explore</a>
+                        </div>
                     </div>
                     <p class="portfolio-badge personal-project-badge">
                         Personal
@@ -261,10 +346,15 @@
                         <h3>3Clues</h3>
                         <p>A word game where you get 3 clues
                             <span class="read-more">and you have to find the answer to what it is.</span>
-                            <span class="read-more-button">[Expand]</span><span class="read-less-button">[Collapse]</span>
+                            <span class="read-more-button">[Expand]</span><span
+                                class="read-less-button">[Collapse]</span>
                         </p>
-                        <a href="https://github.com/charrde/3clues" target="_blank" class="button-github">View on Github</a>
-                        <a href="https://3clues.ca/" target="_blank" class="button-primary">Explore</a>
+                        <div class="card-buttons">
+                            <a href="https://github.com/charrde/3clues" target="_blank" class="button-github"><i
+                                    class="bi bi-github"></i>View on Github</a>
+                            <a href="https://3clues.ca/" target="_blank" class="button-primary"><i
+                                    class="bi bi-box-arrow-up-right"></i>Explore</a>
+                        </div>
                     </div>
                     <p class="portfolio-badge personal-project-badge">
                         Personal
@@ -275,9 +365,16 @@
                     <img src="img\screenshots\winton.png" alt="The ultimate clicker game.">
                     <div class="card-text">
                         <h3>Winton Clicker</h3>
-                        <p>The ultimate plushie collecting clicker game! <span class="read-more">Collect plushies, buy autoclicking buildings, buy upgrades, collect buddies, get achievements, and run expeditions!</span><span class="read-more-button"> [Expand]</span><span class="read-less-button"> [Collapse]</span></p>
-                        <a href="https://github.com/charrde/winton-clicker" target="_blank" class="button-github">View on Github</a>
-                        <a href="https://winton.patski.dev/" target="_blank" class="button-primary">Explore</a>
+                        <p>The ultimate plushie collecting clicker game! <span class="read-more">Collect plushies, buy
+                                autoclicking buildings, buy upgrades, collect buddies, get achievements, and run
+                                expeditions!</span><span class="read-more-button"> [Expand]</span><span
+                                class="read-less-button"> [Collapse]</span></p>
+                        <div class="card-buttons">
+                            <a href="https://github.com/charrde/winton-clicker" target="_blank" class="button-github"><i
+                                    class="bi bi-github"></i>View on Github</a>
+                            <a href="https://winton.patski.dev/" target="_blank" class="button-primary"><i
+                                    class="bi bi-box-arrow-up-right"></i>Explore</a>
+                        </div>
                     </div>
                     <p class="portfolio-badge personal-project-badge">
                         Personal
@@ -289,8 +386,12 @@
                     <div class="card-text">
                         <h3>WhiskrJS</h3>
                         <p>A snackbar/toast library with extreme customization.</p>
-                        <a href="https://github.com/charrde/whiskrjs" target="_blank" class="button-github">View on Github</a>
-                        <a href="https://whiskr.patski.dev/" target="_blank" class="button-primary">Explore</a>
+                        <div class="card-buttons">
+                            <a href="https://github.com/charrde/whiskrjs" target="_blank" class="button-github"><i
+                                    class="bi bi-github"></i>View on Github</a>
+                            <a href="https://whiskr.patski.dev/" target="_blank" class="button-primary"><i
+                                    class="bi bi-box-arrow-up-right"></i>Explore</a>
+                        </div>
                     </div>
                     <p class="portfolio-badge personal-project-badge">
                         Personal
@@ -302,8 +403,12 @@
                     <div class="card-text">
                         <h3>Papertrail</h3>
                         <p>A tool to help you track progress while you write.</p>
-                        <a href="https://github.com/charrde/papertrail" target="_blank" class="button-github">View on Github</a>
-                        <a href="https://papertrail.patski.dev/" target="_blank" class="button-primary">Explore</a>
+                        <div class="card-buttons">
+                            <a href="https://github.com/charrde/papertrail" target="_blank" class="button-github"><i
+                                    class="bi bi-github"></i>View on Github</a>
+                            <a href="https://papertrail.patski.dev/" target="_blank" class="button-primary"><i
+                                    class="bi bi-box-arrow-up-right"></i>Explore</a>
+                        </div>
                     </div>
                     <p class="portfolio-badge personal-project-badge">
                         Personal
@@ -325,10 +430,14 @@
                 </div>
                 <div class="portfolio-card">
                     <screenshot id="thistlethread" data-src="https://thistlethread.patski.dev/"></screenshot>
-                    <img src="img\screenshots\thistlethread.png" alt="A mockup brand website posting events and selling tartan, other traditional scottish merchandise.">
+                    <img src="img\screenshots\thistlethread.png"
+                        alt="A mockup brand website posting events and selling tartan, other traditional scottish merchandise.">
                     <div class="card-text">
                         <h3>Thistle & Thread</h3>
-                        <p>A mockup brand website posting events <span class="read-more">and selling tartan, other traditional scottish merchandise.</span> <span class="read-more-button">[Expand]</span><span class="read-less-button">[Collapse]</span></p>
+                        <p>A mockup brand website posting events <span class="read-more">and selling tartan, other
+                                traditional scottish merchandise.</span> <span
+                                class="read-more-button">[Expand]</span><span class="read-less-button">[Collapse]</span>
+                        </p>
                         <div class="card-buttons">
                             <a href="#contact" class="button-primary">Available Upon Request</a>
                         </div>
@@ -390,9 +499,6 @@
                 <a href="https://www.linkedin.com/in/patjski" class="bi bi-linkedin"></a>
                 <a href="https://github.com/charrde" class="bi bi-github"></a>
                 <a href="https://x.com/charrrde" class="bi bi-twitter-x"></a>
-                <a href="https://www.instagram.com/rrick.ski?igsh=aTJ0NzZuNzEwaHJt&utm_source=qr"
-                    class="bi bi-instagram"></a>
-                <a href="https://discord.com/users/245769378899951619" class="bi bi-discord"></a>
                 <a href="" class="bi bi-microsoft-teams"></a>
             </div>
         </div>
@@ -408,9 +514,6 @@
                     <a href="https://www.linkedin.com/in/patjski" class="bi bi-linkedin"></a>
                     <a href="https://github.com/charrde" class="bi bi-github"></a>
                     <a href="https://x.com/charrrde" class="bi bi-twitter-x"></a>
-                    <a href="https://www.instagram.com/rrick.ski?igsh=aTJ0NzZuNzEwaHJt&utm_source=qr"
-                        class="bi bi-instagram"></a>
-                    <a href="https://discord.com/users/245769378899951619" class="bi bi-discord"></a>
                     <a href="" class="bi bi-microsoft-teams"></a>
                 </div>
             </div>

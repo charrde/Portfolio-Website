@@ -1,7 +1,7 @@
 let particleConfig = {
 	"particles": {
 		"number": {
-			"value": 160,
+			"value": 80,
 			"density": {
 				"enable": true,
 				"value_area": 800
@@ -54,7 +54,7 @@ let particleConfig = {
 		},
 		"move": {
 			"enable": true,
-			"speed": 1,
+			"speed": 0.25,
 			"direction": "none",
 			"random": true,
 			"straight": false,
