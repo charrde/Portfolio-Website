@@ -97,9 +97,7 @@
                     Progress'</span><span class="comma">,</span></div>
                 <div class="line indented"><span class="property">achievements:</span> <span class="brace">[</span>
                 </div>
-                <div class="line double-indented"><span class="string">'Dean\'s Honor Roll'</span><span
-                    class="comma">,</span></div>
-                <div class="line double-indented"><span class="string">'Advanced Software Development Projects'</span>
+                <div class="line double-indented"><span class="string">'Dean\'s Honor Roll x4</span>
                 </div>
                 <div class="line indented"><span class="brace">]</span></div>
                 <div class="line"><span class="brace">}</span><span class="semicolon">;</span></div>
