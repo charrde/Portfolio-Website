@@ -218,6 +218,10 @@ h2 span {
   color: #3C873A;
 }
 
+.fullstack .icon-container {
+  color: #F0DB4F;
+}
+
 .tools .icon-container {
   color: #9B4F96;
 }

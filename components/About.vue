@@ -12,7 +12,7 @@
 
           <div class="bio-content">
             <h3>Patrick Skinner</h3>
-            <h4>Full-Stack Developer</h4>
+            <h4>Software Developer</h4>
             <div class="bio-location">
               <i class="bi bi-geo-alt"></i>
               <span>Alberta, Canada</span>
@@ -22,7 +22,7 @@
                 <i class="bi bi-envelope"></i>
                 <span>Contact Me</span>
               </a>
-              <a href="" class="download-button">
+              <a href="https://drive.google.com/file/d/1avRvl6mwOqQkiQcCRET6rH74IOAnTBEJ/view?usp=sharing" class="download-button">
                 <i class="bi bi-download"></i>
                 <span>Download Resume</span>
               </a>
@@ -47,7 +47,7 @@
 
               <div class="code-text">
                 <div class="line comment-block">/**</div>
-                <div class="line comment-block"> * Hi, I'm Patrick Skinner, a Full-Stack Developer based in Alberta,
+                <div class="line comment-block"> * Hi, I'm Patrick Skinner, a Software Developer based in Alberta,
                   Canada.</div>
                 <div class="line comment-block"> * I am an undergraduate from NAIT (Northern Alberta Institute of
                   Technology)</div>
@@ -93,8 +93,7 @@
                     Alberta'</span><span class="comma">,</span></div>
                 <div class="line indented"><span class="property">period:</span> <span
                     class="string">'2023-2025'</span><span class="comma">,</span></div>
-                <div class="line indented"><span class="property">status:</span> <span class="string">'In
-                    Progress'</span><span class="comma">,</span></div>
+                <div class="line indented"><span class="property">status:</span> <span class="string">'Completed'</span><span class="comma">,</span></div>
                 <div class="line indented"><span class="property">achievements:</span> <span class="brace">[</span>
                 </div>
                 <div class="line double-indented"><span class="string">'Dean\'s Honor Roll x4</span>

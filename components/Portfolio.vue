@@ -129,7 +129,7 @@ const projects = [
     liveUrl: 'https://winton.patski.dev/',
     type: 'Personal',
     isExpanded: false,
-    technologyIds: ['html5', 'css3', 'javascript', 'vue', 'nuxt', 'tailwind', 'tauri', 'pinia', 'postgresql']
+    technologyIds: ['html5', 'css3', 'javascript', 'typescript', 'vue', 'nuxt', 'tailwind', 'tauri', 'pinia', 'postgresql']
   },
   {
     title: 'WhiskrJS',
